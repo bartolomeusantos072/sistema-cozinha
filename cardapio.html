@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de Cardápio Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro do Cardápio Escolar</h1>
+    <form action="#" method="post">
+      <label for="data">Data:</label>
+      <input type="text" name="data" required pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}$" title="Formato da data: dd/mm/aaaa">
+
+
+      <label for="refeicao">Refeição:</label>
+      <select id="refeicao" name="refeicao" required>
+        <option value="">Selecione</option>
+        <option value="cafe">Café da Manhã</option>
+        <option value="almoco">Almoço</option>
+        <option value="lanche">Lanche</option>
+        <option value="jantar">Jantar</option>
+      </select>
+    
+      <label for="prato">Prato Principal:</label>
+      <input type="text" id="prato" name="prato"
+        required
+        pattern="^[A-Za-zÀ-ÿ\s]{2,}$"
+        title="O prato deve conter apenas letras e espaços, com no mínimo 2 caracteres.">
+    
+      <label for="acompanhamento">Acompanhamento:</label>
+      <input type="text" id="acompanhamento" name="acompanhamento"
+        required
+        pattern="^[A-Za-zÀ-ÿ\s]{2,}$"
+        title="O acompanhamento deve conter apenas letras e espaços, com no mínimo 2 caracteres.">
+    
+      <label for="bebida">Bebida:</label>
+      <input type="text" id="bebida" name="bebida"
+        required
+        pattern="^[A-Za-zÀ-ÿ0-9\s]{2,}$"
+        title="A bebida deve conter apenas letras e espaços, com no mínimo 2 caracteres.">
+    
+      <label for="sobremesa">Sobremesa:</label>
+      <input type="text" id="sobremesa" name="sobremesa"
+        required
+        pattern="^[A-Za-zÀ-ÿ\s]{2,}$"
+        title="A sobremesa deve conter apenas letras e espaços, com no mínimo 2 caracteres.">
+    
+
+      <button type="submit">Cadastrar Cardápio</button>
+    </form>
+  </div>
+</body>
+</html>
